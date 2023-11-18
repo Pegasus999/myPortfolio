@@ -1,8 +1,12 @@
+import HomePage from "./components/Home/Home";
 import { NavBar } from "./components/NavigationBar/NavBar";
+import Services from "./components/Services/Services";
 function App() {
   return (
-    <div className="flex bg-[--white] h-screen ">
+    <div className="flex flex-col bg-[--white] h-screen ">
       <NavBar></NavBar>
+      <HomePage />
+      <Services />
     </div>
   );
 }
