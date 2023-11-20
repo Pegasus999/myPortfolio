@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export const NavBar = () => {
   const [selected, setSelected] = useState<number>(0);
-  const tabs = ["Home", "Services", "Projects", "Contact"];
+  const tabs = ["Home", "Projects", "Contact"];
   return (
     <div className="w-full fixed z-10 h-20 bg-transparent flex justify-between items-center px-10">
       <div className="ml-20 font-[italionno] text-[--white] text-4xl italic">

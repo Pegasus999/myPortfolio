@@ -15,7 +15,7 @@ export default function HomePage() {
         backgroundImage: `url(${Wallpaper})`,
       }}
     >
-      <div className="max-w-[1200px] w-[70%] flex justify-center items-center">
+      <div className="max-w-[1200px] w-[70%] flex justify-center items-center flex-wrap-reverse">
         <div className="max-w-[500px] w-[62%]">
           <div className="text-white text-5xl font-bold">Hi, I am Adem</div>
           <div className="mt-5 text-[--black] text-5xl font-bold ">
