@@ -12,31 +12,10 @@ export default function Card({ title, tools, repo, img, i }) {
 
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const callback = function (entries: any) {
-      entries.forEach((entry: any) => {
-        console.log(entry);
-
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fadeIn");
-
-          observer.unobserve(entry.target);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, { threshold: 1 });
-
-    const targets = document.querySelectorAll(".js-show-on-scroll");
-    targets.forEach(function (target) {
-      observer.observe(target);
-    });
-  }, []);
-
   return (
     <>
       <div
-        className="js-show-on-scroll opacity-0 snap-center mx-auto flex flex-col rounded-[12px] w-[300px] min-h-[450px] cursor-pointer p-1 relative overflow-hidden group"
+        className=" snap-center mx-auto flex flex-col rounded-[12px] w-[300px] min-h-[450px] cursor-pointer p-1 relative overflow-hidden group"
         style={{ animationDelay: `${(60 + 1) * i}ms` }}
         onClick={() => {
           setShowModal(true);
@@ -109,7 +88,14 @@ function Portal({ onClose, img }) {
               <IoIosCloseCircle />
             </Button>
             <div className="flex justify-between items-center h-full">
-              <Button size="sm">
+              <Button
+                size="sm"
+                onClick={() => {
+                  setIndex((prev) => {
+                    return prev == 0 ? img.length - 1 : prev - 1;
+                  });
+                }}
+              >
                 <FaAngleLeft />
               </Button>
               <div

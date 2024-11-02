@@ -10,8 +10,15 @@ import stockgg from "../assets/images/stockgg/exports";
 import pegawears from "../assets/images/pegawears/exports";
 import pharmacy from "../assets/images/pharmacy/exports";
 import wasali from "../assets/images/wasali/exports";
+import perfume_ims from "../assets/images/perfume-ims/exports";
 
 const projects: project[] = [
+  {
+    title: "Inventory Management System for perfume",
+    repo: "",
+    tools: ["Electron", "Node Js", "Typescript", "Prisma", "Sqlite"],
+    img: perfume_ims,
+  },
   {
     title: "Uber like App",
     repo: "",
